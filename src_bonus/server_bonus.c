@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   server.c                                           :+:      :+:    :+:   */
+/*   server_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: misi-moh <misi-moh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/01 14:58:06 by misi-moh          #+#    #+#             */
-/*   Updated: 2023/05/15 11:41:57 by misi-moh         ###   ########.fr       */
+/*   Created: 2023/05/15 11:37:31 by misi-moh          #+#    #+#             */
+/*   Updated: 2023/05/15 12:11:05 by misi-moh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ void	sig_handle(int signal, siginfo_t *info, void *content)
 	if (bits == 8)
 	{
 		ft_putchar_fd(c, STDOUT_FILENO);
+		if (c == '\0')
+			kill(info->si_pid, SIGUSR2);
 		c = 0;
 		bits = 0;
 	}

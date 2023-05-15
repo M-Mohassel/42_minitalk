@@ -24,6 +24,11 @@ fclean: clean
 	@cd $(LIBFT_DIR) && make fclean
 	@echo "all files have been deleted"
 
+bonus: fclean
+	@cd $(LIBFT_DIR) && make all
+	@cc -Wall -Wextra -Werror src_bonus/client_bonus.c $(LIBS) $(HEADERS) -o $(NAME_CLIENT)
+	@cc -Wall -Wextra -Werror src_bonus/server_bonus.c $(LIBS) $(HEADERS) -o $(NAME_SERVER)
+
 
 re: fclean all
 
