@@ -6,7 +6,7 @@
 /*   By: misi-moh <misi-moh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 14:58:06 by misi-moh          #+#    #+#             */
-/*   Updated: 2023/05/15 11:41:57 by misi-moh         ###   ########.fr       */
+/*   Updated: 2023/05/19 15:10:40 by misi-moh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int	main(void)
 	int	pid_server;
 
 	pid_server = getpid();
-	printf("SERVER PID: %d\n\n", pid_server);
+	ft_printf("SERVER PID: %d\n\n", pid_server);
 	signal_conf();
 	while (1)
 	{
