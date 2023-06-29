@@ -11,8 +11,6 @@
       * [Client](#client)
       * [Server](#client)
       * [Bonus Features](#bonus-features)
-      * [Functions Explained](#functions-explained)
-   * [Credits](#dependency)
 <!--te-->
 
 ## Usage
